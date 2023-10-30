@@ -7,38 +7,42 @@
     <title>Quiz App</title>
 </head>
 <body onload="nextQuestion()">
-    <div>
-        <p id="timer">2:00</p>
-    </div>
     
-    <div>
-        <p id="ques" class=""></p>
+    <div class="container">
+    
+        <div>
+            <h1 class="timerStyle" id="timer">2:00</p>
+        </div>
         <br>
         <br>
-        <input name="options" value="1" onclick="clicked()" type="radio" >
-        <label id="opt1" ></label>
         <br>
-        <br>
-        <input name="option" value="2" onclick="clicked()" type="radio" >
-        <label id="opt2" ></label>
-        <br>
-        <br>
-        <input name="option" value="3" onclick="clicked()" type="radio" >
-        <label id="opt3" ></label>
-        <br>
-        <br>
-        <button onclick="nextQuestion()">Next Question</button>
-    </div>
+        <div class="quesAns">
+            <p id="ques" style="font-size: 32px; " class="quest"></p>
+            <br>
+            <br>
+            <input  name="options" value="1" onclick="clicked()" type="radio" >
+            <label  id="opt1" ></label>
+            <br>
+            <br>
+            <input name="options" value="2" onclick="clicked()" type="radio" >
+            <label id="opt2" ></label>
+            <br>
+            <br>
+            <input name="options" value="3" onclick="clicked()" type="radio" >
+            <label id="opt3" ></label>
+            <br>
+            <br>
+            <button id="button" onclick="nextQuestion()">Next Question</button>
+        </div>
+        
     
     
     
     
     
+</div>
     
-    
-    
-    
-    
+     
     
     
     

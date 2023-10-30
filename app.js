@@ -52,19 +52,19 @@ var min=1
 setInterval(function(){
     timer.innerHTML = `${min} : ${sec}`;
     sec--;
-    if(sec<0){
+    if(sec < 0 ){
         min --;
         sec = 59
     }
-    if(min<0){
-        min =1;
-        sec=59;
+    if(min < 0){
+        min = 1;
+        sec= 59;
         nextQuestion()
     }
-},1000)
+}, 1000)
 
 
-function nextQuestion(){
+function nextQuestion() {
     question.innerHTML = questions[index].question
     option1.innerText = questions[index].option1
     option2.innerText = questions[index].option2
@@ -73,27 +73,33 @@ function nextQuestion(){
 };
 
 
+button.disabled = false;
+
 
 var getOptions = document.getElementsByName("options");
 for(var i=0; i<getOptions.length; i++){
     if(getOptions[i].checked){
         var selectedValue = getOptions[i].value;
         var selectedQues = questions[index -1]["question"];
-        var selectedAns = questions[index -1][`option&{selectedQues}`];
+        var selectedAns = questions[index -1][`options ${selectedQues}`];
         var correctAns = question[index -1]["correctAns"];
         if(selectedAns == correctAns){
             score++
         }
-
+        button.disabled = false;
     }
-    getOptions[i].checked = false ;
+    
 
 }
+getOptions[i].checked = false ;
+
+
 button.disabled = true;
 
-if(index > questions.length -1){
-    Swal.fire(
-        `Good Job !`,
-        `Your Score is &{((score / questions.length)*100).toFixed(2)}`,
-    )
-}
+// if(index > questions.length -1) {
+//     Swal.fire(
+//         `Good Job !`,
+//         `Your Score is & ${((score / questions.length)*100).toFixed(2)}`,
+//     )
+
+// }

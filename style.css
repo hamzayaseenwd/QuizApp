@@ -1,0 +1,20 @@
+.container{
+    /* background-image: url(istockphoto-1337668467-612x612.jpg); */
+    
+}
+.timerStyle{
+    text-align: center;
+    
+    
+}
+
+.quesAns{
+    margin-left: 25%;
+    margin-right: 25%;
+    border: 10px solid rgb(0, 0, 0);
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    /* background-image: url(istockphoto-1337668467-612x612.jpg); */
+}
+
